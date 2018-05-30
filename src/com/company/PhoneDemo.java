@@ -10,29 +10,29 @@ public class PhoneDemo {
         Phone phone2 = new Phone("+380950067597", "Lenovo");
         Phone phone3 = new Phone("+38095006759", "Nokia", 34);
 
-        phone1.model = "Lenovo";
-        phone1.weight = 3;
-        phone1.number = "+380950067597";
+        phone1.setModel("Lenovo");
+        phone1.setWeight(3);
+        phone1.setNumber("+380950067597");
 
-        System.out.println("model: " + phone1.model);
-        System.out.println("weight: " + phone1.weight);
-        System.out.println("number: " + phone1.number);
+        System.out.println("model: " + phone1.getNumber());
+        System.out.println("weight: " + phone1.getWeight());
+        System.out.println("number: " + phone1.getNumber());
 
-        phone2.model = "Apple";
-        phone2.weight = 5;
-        phone2.number = "+380685449281";
+        phone2.setModel("Apple");
+        phone2.setWeight(5);
+        phone2.setNumber("+380685449281");
 
-        System.out.println("model: " + phone2.model);
-        System.out.println("weight: " + phone2.weight);
-        System.out.println("number: " + phone2.number);
+        System.out.println("model: " + phone2.getModel());
+        System.out.println("weight: " + phone2.getWeight());
+        System.out.println("number: " + phone2.getNumber());
 
-        phone3.model = "Meizu";
-        phone3.weight = 8;
-        phone3.number = "+380952013211";
+        phone3.setModel("Meizu");
+        phone3.setWeight(8);
+        phone3.setNumber("+380952013211");
 
-        System.out.println("model: " + phone3.model);
-        System.out.println("weight: " + phone3.weight);
-        System.out.println("number: " + phone3.number);
+        System.out.println("model: " + phone3.getModel());
+        System.out.println("weight: " + phone3.getWeight());
+        System.out.println("number: " + phone3.getNumber());
 
         phone1.receiveCall("Mama");
         phone2.receiveCall("Papa");
@@ -43,5 +43,16 @@ public class PhoneDemo {
         System.out.println(number2);
         String number3 = phone3.getNumber();
         System.out.println(number3);
+
+        phone1.receiveCall(" Mama", " +380952013211");
+
+        phone1.sendMessage(" +380950067597");
+        phone1.sendMessage(" +380950067587", " +380951787039");
+
+        System.out.println(phone1 == phone2);
+        System.out.println(phone1 == phone3);
+
+        System.out.println(phone1.equals(phone2));
+        System.out.println(phone1.equals(phone2));
     }
 }
